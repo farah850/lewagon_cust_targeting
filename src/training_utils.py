@@ -83,21 +83,3 @@ def fit_and_return_preprocessed_df(preprocessor, X):
     X_df = pd.DataFrame(X_transformed, columns=feature_names)
 
     return X_df
-
-# def transform_with_feature_names(preprocessor, X, feature_names):
-#     """
-#     Transform new data using a fitted preprocessor and return a DataFrame.
-
-#     Args:
-#         preprocessor (ColumnTransformer): Fitted preprocessor.
-#         X (pd.DataFrame): New data to transform.
-#         feature_names (array-like): Feature names from the preprocessor.
-
-#     Returns:
-#         X_df (pd.DataFrame): Transformed DataFrame with columns.
-#     """
-
-#     X_transformed = preprocessor.transform(X)
-#     X_df = pd.DataFrame(X_transformed, columns=feature_names)
-
-#     return X_df
