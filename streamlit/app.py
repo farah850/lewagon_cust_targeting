@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from streamliteda import show_eda
 from pathlib import Path
-
+from predict import show_prediction
 @st.cache_data
 def load_data():
     try:
@@ -20,9 +20,13 @@ def main():
 
     if page == "EDA":
         st.title("Exploratory Data Analysis")
-        show_eda(data)
+        if not data.empty:
+            show_eda(data)
+        else:
+            st.warning("No data available to display EDA.")
 
-    # TODO: Add Prediction page functionality here
+    elif page == "Prediction":
+        show_prediction()
 
 if __name__ == "__main__":
     main()
