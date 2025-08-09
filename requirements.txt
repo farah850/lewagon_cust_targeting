@@ -10,3 +10,5 @@ scikit-learn
 streamlit
 nbdime
 tensorflow
+lazypredict
+ipywidgets
