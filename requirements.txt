@@ -12,3 +12,4 @@ nbdime
 tensorflow
 lazypredict
 ipywidgets
+plotly
